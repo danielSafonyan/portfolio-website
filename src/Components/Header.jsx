@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import './Header.css'
 
@@ -9,6 +9,11 @@ export default function Header() {
         visibility: isMenuOpen ? 'visible' : 'hidden',
         opacity: isMenuOpen ? 1 : 0
     }
+
+    let activeStyle = {
+        color: "red",
+    };
+
     return (
     <header className="header">
       <div className="header__content">
@@ -25,18 +30,26 @@ export default function Header() {
         <div className="header__main">
           <ul className="header__links">
             <li className="header__link-wrapper">
-              <Link to={'/'}> <a className="header__link"> Home </a> </Link>
+              <NavLink to={'/'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }> <a className="header__link"> Home </a> </NavLink>
             </li>
             <li className="header__link-wrapper">
-              <Link to={'/projects'}><a className="header__link">
+              <NavLink to={'/projects'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }><a className="header__link">
                 Projects
-              </a> </Link> 
+              </a> </NavLink> 
             </li>
             <li className="header__link-wrapper">
-              <Link to={'/about'}><a className="header__link">About </a></Link>
+              <NavLink to={'/about'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }><a className="header__link">About </a></NavLink>
             </li>
             <li className="header__link-wrapper">
-              <Link to={'/contact'}><a className="header__link"> Contact </a></Link>
+              <NavLink to={'/contact'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }><a className="header__link"> Contact </a></NavLink>
             </li>
           </ul>
           <div className="header__main-ham-menu-cont">
