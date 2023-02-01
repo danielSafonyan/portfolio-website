@@ -16,7 +16,7 @@ export default function Home() {
                 <p className="text-primary">I have a Bachelor's Degree in Information Systems, which has provided me with a solid foundation for the career in the field.</p>
                 </div>
                 <div className="home-hero__cta">
-                <NavLink to={'/projects'} ><a className="btn btn--bg">See my projects</a> </NavLink>
+                <NavLink to={'/projects'} className="btn btn--bg">See my projects</NavLink>
                 </div>
             </div>
             <div className="home-hero__socials">

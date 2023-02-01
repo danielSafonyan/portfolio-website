@@ -32,24 +32,22 @@ export default function Header() {
             <li className="header__link-wrapper">
               <NavLink to={'/'} style={({ isActive }) =>
               isActive ? activeStyle : undefined
-            }> <a className="header__link"> Home </a> </NavLink>
+            } className="header__link">Home</NavLink>
             </li>
             <li className="header__link-wrapper">
               <NavLink to={'/projects'} style={({ isActive }) =>
               isActive ? activeStyle : undefined
-            }><a className="header__link">
-                Projects
-              </a> </NavLink> 
+            } className="header__link">Projects</NavLink> 
             </li>
             <li className="header__link-wrapper">
               <NavLink to={'/about'} style={({ isActive }) =>
               isActive ? activeStyle : undefined
-            }><a className="header__link">About </a></NavLink>
+            } className="header__link">About</NavLink>
             </li>
             <li className="header__link-wrapper">
               <NavLink to={'/contact'} style={({ isActive }) =>
               isActive ? activeStyle : undefined
-            }><a className="header__link"> Contact </a></NavLink>
+            } className="header__link">Contact</NavLink>
             </li>
           </ul>
           <div className="header__main-ham-menu-cont">
@@ -74,20 +72,26 @@ export default function Header() {
       <div className="header__sm-menu" style={smMenuStyle}>
         <div className="header__sm-menu-content">
           <ul className="header__sm-menu-links">
-            <li className="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
 
             <li className="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
+              <NavLink to={'/'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } className="header__link">Home</NavLink>
             </li>
-            
             <li className="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
+              <NavLink to={'/projects'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } className="header__link">Projects</NavLink> 
             </li>
-
             <li className="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
+              <NavLink to={'/about'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } className="header__link">About</NavLink>
+            </li>
+            <li className="header__sm-menu-link">
+              <NavLink to={'/contact'} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } className="header__link">Contact</NavLink>
             </li>
           </ul>
         </div>
