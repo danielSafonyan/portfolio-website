@@ -16,16 +16,26 @@ WHY DOES NESTING CSS CLASSES WORK HERE??????
 
 */
 
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-container {
+    flex: 1;
+}
+
 * {
     --n-blue: 0, 98, 185;
-    --blue: rgba(0, 98, 185, 0.8);
-    --red: red;
+    --red: #DE3C4B;
+    --blue: #2D3142;
     --purple: rgba(143, 162, 255, 0.8);
     --green: rgba(31, 79, 45, 0.8);
     --light-green: rgba(101, 146, 74, 0.8);
     --brown: rgba(129, 104, 8, 0.8);
     --light-brown: rgba(186, 155, 65, 0.8);
-    --main-color: var(--n-blue);
+    --main-color: #EDE6F2;
 }
 
 *,
@@ -97,7 +107,7 @@ textarea {
 
 .heading-primary {
     font-size: 6rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 3px;
     text-align: center;
 }
@@ -200,8 +210,8 @@ textarea {
 }
 
 .btn {
-    background: #fff;
-    color: #333;
+    background: var(--blue);
+    color: var(--main-color);
     text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
@@ -249,11 +259,11 @@ textarea {
 }
 
 .text-primary {
-    color: #fff;
+    /* color: #fff; */
     font-size: 2.2rem;
-    text-align: center;
-    width: 100%;
-    line-height: 1.6;
+    text-align: justify;
+    max-width: 80ch;
+    margin: 1em;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -269,12 +279,10 @@ textarea {
 /* rgba(var(--n-blue), 0.8)*/
 /* qwe */
 .home-hero {
-    color: #fff;
+    height: 100%;
+    color: var(--blue);
     background: linear-gradient(to right, rgba(var(--main-color), 0.8), rgba(var(--main-color), 0.8)), url(../../assets/svg/common-bg.svg);
     background-position: center;
-    height: 100vh;
-    min-height: 80rem;
-    max-height: 120rem;
     position: relative;
 }
 
@@ -288,9 +296,8 @@ textarea {
 .home-hero__socials {
     position: absolute;
     top: 50%;
-    border: 2px solid #eee;
-    border-left: 2px solid #eee;
     transform: translateY(-50%);
+    background-color: var(--blue);
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -320,7 +327,8 @@ textarea {
     width: 100%;
     display: block;
     padding: 1.2rem;
-    border-bottom: 2px solid #eee;
+    /* border-bottom: 2px solid #eee; */
+    margin: 0.1rem 0;
     transition: background .3s;
 }
 
@@ -650,7 +658,6 @@ textarea {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #333;
     transition: color .3s;
 }
 
@@ -705,7 +712,6 @@ textarea {
     padding: 2.2rem 3rem;
     display: inline-block;
     font-size: 1.6rem;
-    /* color: #333; */
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;

@@ -11,7 +11,7 @@ export default function Header() {
     }
 
     let activeStyle = {
-        color: "red",
+        color: "var(--red)",
     };
 
     return (
