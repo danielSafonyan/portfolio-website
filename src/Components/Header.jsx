@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import './Header.css'
 
 export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(true)
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false)
     const smMenuStyle = {
         visibility: isMenuOpen ? 'visible' : 'hidden',
         opacity: isMenuOpen ? 1 : 0
@@ -23,18 +25,18 @@ export default function Header() {
         <div className="header__main">
           <ul className="header__links">
             <li className="header__link-wrapper">
-              <a href="./index.html" className="header__link"> Home </a>
+              <Link to={'/'}> <a className="header__link"> Home </a> </Link>
             </li>
             <li className="header__link-wrapper">
-              <a href="./index.html#projects" className="header__link">
+              <Link to={'/projects'}><a className="header__link">
                 Projects
-              </a>
+              </a> </Link> 
             </li>
             <li className="header__link-wrapper">
-              <a href="./index.html#about" className="header__link">About </a>
+              <Link to={'/about'}><a className="header__link">About </a></Link>
             </li>
             <li className="header__link-wrapper">
-              <a href="./index.html#contact" className="header__link"> Contact </a>
+              <Link to={'/contact'}><a className="header__link"> Contact </a></Link>
             </li>
           </ul>
           <div className="header__main-ham-menu-cont">

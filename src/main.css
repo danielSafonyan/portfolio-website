@@ -625,7 +625,7 @@ textarea {
 }
 
 .header {
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 1000;
     background: #000;
@@ -765,6 +765,14 @@ textarea {
         visibility: visible;
         opacity: 1;
     }
+}
+
+#error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .header__sm-menu-link a {
