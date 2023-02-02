@@ -26,7 +26,10 @@ export default function Home() {
                     This section is a showcase of my web development skills and experience. 
                 </p>
                 <p className="text-primary"> 
-                    Projects are built using Vanilla JavaScript or the React framework with React Hooks and React Router and are accompanied by a live demonstration and a source code.
+                    The portfolio website itself is built with React Framework. Other projects are built using Vanilla JavaScript or React. You can filter out a project by technology.
+                </p>
+                <p className="text-primary"> 
+                    Each project has a link to live preview and source code on GitHub.
                 </p>
                 </div>
             </div>
