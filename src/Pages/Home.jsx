@@ -4,7 +4,6 @@ import Socials from '../components/Socials'
 import { NavLink } from "react-router-dom";
 
 export default function Home() {
-    console.log("i am rendering")
     return (
         <section className="home-hero">
             <div className="home-hero__content">
@@ -24,7 +23,6 @@ export default function Home() {
                 <NavLink to={'/projects'} className="btn btn--bg">See my projects</NavLink>
                 </div>
             </div>
-            <Socials />
     </section>
         )
 }

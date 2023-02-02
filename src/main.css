@@ -284,6 +284,83 @@ textarea {
     background: linear-gradient(to right, rgba(var(--main-color), 0.8), rgba(var(--main-color), 0.8)), url(../../assets/svg/common-bg.svg);
     background-position: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.filters {
+    display: flex;
+    gap: 1em;
+}
+
+.filter-btn {
+        display: flex;
+
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        border: 1px solid;
+
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+}
+
+.active-btn {
+    color: var(--main-color);
+    background-color: var(--blue);
+}
+
+.projects-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 70vw;
+}
+
+.project {
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.project-info {
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.project-image {
+    width: 100%;
+    display: block;
+}
+
+.project-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 1.5rem;
+}
+
+.link-container {
+    display: flex;
+    justify-content: start;
+    gap: 1em;
+}
+
+.project-link {
+    flex: 1;
+    font-size: 2rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -304,13 +381,6 @@ textarea {
     .home-hero__socials {
         display: none;
     }
-}
-
-.home-hero__mouse-scroll-cont {
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -345,12 +415,6 @@ textarea {
 }
 
 .home-hero__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 90rem;
-    width: 92%;
 }
 
 @media only screen and (max-width: 37.5em) {
