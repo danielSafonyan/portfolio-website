@@ -42,7 +42,7 @@ export default function Header() {
             <li className="header__link-wrapper">
               <NavLink to={'/about'} style={({ isActive }) =>
               isActive ? activeStyle : undefined
-            } className="header__link">About</NavLink>
+            } className="header__link">CV</NavLink>
             </li>
             <li className="header__link-wrapper">
               <NavLink to={'/contact'} style={({ isActive }) =>

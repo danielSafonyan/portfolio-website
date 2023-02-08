@@ -16,6 +16,12 @@ WHY DOES NESTING CSS CLASSES WORK HERE??????
 
 */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 #root {
     height: 100vh;
     display: flex;
@@ -228,6 +234,7 @@ textarea {
 .btn--bg {
     padding: 1.5rem 8rem;
     font-size: 2rem;
+    margin-top: 2rem;
 }
 
 .btn--med {
@@ -263,7 +270,7 @@ textarea {
     font-size: 2.2rem;
     text-align: justify;
     max-width: 80ch;
-    margin: 1em;
+    margin: 1rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -375,6 +382,7 @@ textarea {
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--blue);
+    z-index: 1;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -426,13 +434,17 @@ textarea {
     }
 }
 
+.iframe {
+    margin: 1rem;
+}
+
 .home-hero__info {
     margin: 3rem auto 0 auto;
     max-width: 80rem;
+    text-align: center;
 }
 
 .home-hero__cta {
-    margin-top: 5rem;
     text-align: center;
 }
 
