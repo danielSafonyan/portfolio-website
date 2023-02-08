@@ -11,8 +11,6 @@ export default function Home() {
                 <div className="home-hero__info">
                 <p className="text-primary">
                     We can contact via an email, WhatsApp or LinkedIn.
-                </p>
-                <p className="text-primary">
                     You can find me at danielSafonyan@gmail.com or +7 999 111 6921.
                 </p>
                 </div>
